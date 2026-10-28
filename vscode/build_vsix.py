@@ -42,6 +42,7 @@ MANIFEST = f"""<?xml version="1.0" encoding="utf-8"?>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
     <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
   </Assets>
 </PackageManifest>"""
 
@@ -54,6 +55,8 @@ def main():
         z.writestr("extension.vsixmanifest", MANIFEST)
         for name in ("package.json", "extension.js", "README.md"):
             z.write(HERE / name, f"extension/{name}")
+        z.write(ROOT / "LICENSE", "extension/LICENSE.txt")
+        z.write(ROOT / "LICENSE", "extension/python/LICENSE")
         z.write(ROOT / "pyproject.toml", "extension/python/pyproject.toml")
         z.write(ROOT / "README.md", "extension/python/README.md")
         for f in sorted((ROOT / "tokendiet").glob("*.py")):

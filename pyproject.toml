@@ -7,12 +7,25 @@ name = "tokendiet"
 version = "0.1.0"
 description = "Local code graph for coding agents (Claude Code, Codex, Cursor) over MCP, with notes that carry across sessions"
 readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Genga28" }]
+keywords = ["claude", "codex", "copilot", "cursor", "mcp", "code graph", "tokens", "ai agents"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development",
+]
 requires-python = ">=3.10"
 dependencies = [
   "tree-sitter>=0.25",
   "tree-sitter-language-pack>=1.0",
   "tiktoken>=0.7",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Genga28/TokenDiet"
+Repository = "https://github.com/Genga28/TokenDiet"
+Issues = "https://github.com/Genga28/TokenDiet/issues"
 
 [project.scripts]
 tokendiet = "tokendiet.cli:main"

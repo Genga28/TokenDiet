@@ -34,3 +34,7 @@ enabling. On 4 open-source repos the tools used 55–81% fewer tokens than the c
 task, with 95–100% correct definitions and 0.70–0.97 usage recall. Estimates under-count by design.
 
 Everything runs locally. No code leaves your machine.
+
+## License and source
+
+MIT © 2026 Genga28. Source, issues and benchmarks: https://github.com/Genga28/TokenDiet

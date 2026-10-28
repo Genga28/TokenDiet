@@ -84,3 +84,7 @@ python -m bench.live_ab <repo>         # real agent A/B via `claude -p` (spends 
 - Token counts in offline benchmarks use tiktoken cl100k as a proxy for Claude's tokenizer; ratios hold, absolute
   numbers run somewhat low on code. Live A/B uses the API's own counts.
 - Files > 512 KB, minified and generated files are skipped.
+
+## License
+
+MIT © 2026 [Genga28](https://github.com/Genga28). See [LICENSE](LICENSE).
