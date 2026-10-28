@@ -19,3 +19,4 @@ CLAUDE.md
 # benchmark outputs derived from private repos or personal session logs; offline.json (public repos) is kept
 results/*
 !results/offline.json
+PyPI-Recovery-Codes-kgenga-2026-10-28T13_31_52.111703.txt
