@@ -33,7 +33,7 @@ were checked against measured grep/read output and run low (median 0.84x), so th
 ## Setup
 
 ```
-pipx install tokendiet          # or: pip install tokendiet   (from this folder: pip install -e .)
+pipx install tokendiet-mcp      # or: pip install tokendiet-mcp   (from this folder: pip install -e .)
 cd your-repo
 tokendiet init                  # enable for Claude Code + Codex, build the index
 tokendiet uninit                # undo; removes only what init added
