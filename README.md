@@ -67,7 +67,7 @@ CLI mirrors: `map`, `find`, `context`, `impact`, `note`, `stats`.
 
 ## Benchmarks
 
-See [RESULTS.md](RESULTS.md). Reproduce:
+See [RESULTS.md](https://github.com/Genga28/TokenDiet/blob/main/RESULTS.md). Reproduce:
 
 ```
 python -m bench.transcripts            # where tokens go in your own Claude Code sessions
@@ -87,4 +87,4 @@ python -m bench.live_ab <repo>         # real agent A/B via `claude -p` (spends 
 
 ## License
 
-MIT © 2026 [Genga28](https://github.com/Genga28). See [LICENSE](LICENSE).
+MIT © 2026 [Genga28](https://github.com/Genga28). See [LICENSE](https://github.com/Genga28/TokenDiet/blob/main/LICENSE).

@@ -169,13 +169,14 @@ class Graph:
             parent, q = parts[-2], parts[-1]
         sql = ("SELECT s.*, f.path FROM symbols s JOIN files f ON f.id=s.file_id "
                "LEFT JOIN symbols p ON p.id=s.parent_id WHERE {} {} ORDER BY s.depth, f.path LIMIT 200")
-        pclause = "AND p.name=?" if parent else ""
-        args = (q, parent) if parent else (q,)
-        rows = con.execute(sql.format("s.name=?", pclause), args).fetchall()
+        # Go methods live outside their type: `func (c *Context) JSON(...)` has no parent, so match the receiver too
+        pclause = "AND (p.name=? OR s.signature LIKE ?)" if parent else ""
+        pargs = (parent, f"%{parent}) {q}%") if parent else ()
+        rows = con.execute(sql.format("s.name=?", pclause), (q, *pargs)).fetchall()
         if not rows:
-            rows = con.execute(sql.format("s.name=? COLLATE NOCASE", pclause), args).fetchall()
+            rows = con.execute(sql.format("s.name=? COLLATE NOCASE", pclause), (q, *pargs)).fetchall()
         if not rows and len(q) >= 3:
-            rows = con.execute(sql.format("s.name LIKE ?", pclause), ((f"%{q}%", parent) if parent else (f"%{q}%",))).fetchall()
+            rows = con.execute(sql.format("s.name LIKE ?", pclause), (f"%{q}%", *pargs)).fetchall()
         self._build()
         return sorted(rows, key=lambda r: (-len(self.ref_files.get(r["name"], ())), r["depth"], r["path"], r["start_line"]))
 
