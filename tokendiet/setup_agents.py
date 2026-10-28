@@ -163,16 +163,21 @@ def init(repo, agents=None, hook=True, budget=1500, vscode=False):
         done.append(".claude/skills/tokendiet/SKILL.md")
         _upsert_section(repo / "CLAUDE.md", SECTION)
         done.append("CLAUDE.md  (tokendiet section)")
+        # machine-specific interpreter path, so it goes in the uncommitted local settings
+        settings = repo / ".claude" / "settings.local.json"
+        data = _read_json(settings)
+        # .mcp.json servers stay disabled until approved, and the VS Code panel may never show the prompt
+        approved = data.setdefault("enabledMcpjsonServers", [])
+        if "tokendiet" not in approved:
+            approved.append("tokendiet")
         if hook:
-            # machine-specific interpreter path, so it goes in the uncommitted local settings
-            settings = repo / ".claude" / "settings.local.json"
-            data = _read_json(settings)
             hooks = data.setdefault("hooks", {}).setdefault("SessionStart", [])
             hooks[:] = [h for h in hooks if not any(HOOK_TAG in x.get("command", "") for x in h.get("hooks", []))]
             hooks.append({"matcher": "startup|clear|compact", "hooks": [
                 {"type": "command", "command": f'"{sys.executable}" -m tokendiet session-start --budget {budget}', "timeout": 30}]})
-            _write_json(settings, data)
-            done.append(".claude/settings.local.json  (SessionStart hook: map + notes injected at startup, /clear, compaction)")
+        _write_json(settings, data)
+        done.append(".claude/settings.local.json  (MCP server approved" +
+                    ("; SessionStart hook: map + notes injected at startup, /clear, compaction)" if hook else ")"))
     if "codex" in agents:
         _upsert_section(repo / "AGENTS.md", SECTION)
         done.append("AGENTS.md  (tokendiet section; also read by other AGENTS.md agents)")
@@ -218,6 +223,13 @@ def uninit(repo):
         out.append(".claude/skills/tokendiet/")
     settings = repo / ".claude" / "settings.local.json"
     data = _read_json(settings)
+    changed = False
+    if "tokendiet" in data.get("enabledMcpjsonServers", []):
+        data["enabledMcpjsonServers"].remove("tokendiet")
+        if not data["enabledMcpjsonServers"]:
+            del data["enabledMcpjsonServers"]
+        changed = True
+        out.append("MCP server approval")
     ss = data.get("hooks", {}).get("SessionStart")
     if ss:
         kept = [h for h in ss if not any(HOOK_TAG in x.get("command", "") for x in h.get("hooks", []))]
@@ -228,11 +240,13 @@ def uninit(repo):
                 del data["hooks"]["SessionStart"]
                 if not data["hooks"]:
                     del data["hooks"]
-            if data:
-                _write_json(settings, data)
-            else:
-                settings.unlink()
+            changed = True
             out.append("SessionStart hook")
+    if changed:
+        if data:
+            _write_json(settings, data)
+        else:
+            settings.unlink()
     for f in ("CLAUDE.md", "AGENTS.md", ".github/copilot-instructions.md"):
         if _remove_section(repo / f):
             out.append(f"{f} section")
