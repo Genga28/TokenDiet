@@ -1,0 +1,1902 @@
+[
+ {
+  "repo": "flask",
+  "index": {
+   "files": 83,
+   "symbols": 1622,
+   "source_tokens": 135488,
+   "cold_seconds": 1.37,
+   "warm_refresh_seconds": 0.092,
+   "db_mb": 0.83
+  },
+  "tool_schema_tokens": 507,
+  "summary": {
+   "locate": {
+    "n": 20,
+    "baseline_median": 8638.5,
+    "lean_median": 1103.5,
+    "ctxgraph_median": 558.5,
+    "baseline_total": 161869,
+    "lean_total": 38565,
+    "ctxgraph_total": 17480,
+    "reduction_pct": 89.2,
+    "reduction_vs_lean_pct": 54.7,
+    "worst_case_ratio": 0.57,
+    "correct": 1.0
+   },
+   "understand": {
+    "n": 15,
+    "baseline_median": 22481,
+    "lean_median": 1892,
+    "ctxgraph_median": 409,
+    "baseline_total": 461986,
+    "lean_total": 28500,
+    "ctxgraph_total": 6404,
+    "reduction_pct": 98.6,
+    "reduction_vs_lean_pct": 77.5,
+    "worst_case_ratio": 12.14,
+    "usage_recall": 0.969,
+    "precision": 0.934
+   },
+   "impact": {
+    "n": 10,
+    "baseline_median": 34677.5,
+    "lean_median": 2774.0,
+    "ctxgraph_median": 841.0,
+    "baseline_total": 350387,
+    "lean_total": 25864,
+    "ctxgraph_total": 9081,
+    "reduction_pct": 97.4,
+    "reduction_vs_lean_pct": 64.9,
+    "worst_case_ratio": 6.69,
+    "dependent_recall": 1.0
+   },
+   "orient": {
+    "n": 1,
+    "baseline_median": 41511,
+    "lean_median": 1044,
+    "ctxgraph_median": 1900,
+    "baseline_total": 41511,
+    "lean_total": 1044,
+    "ctxgraph_total": 1900,
+    "reduction_pct": 95.4,
+    "reduction_vs_lean_pct": -82.0,
+    "worst_case_ratio": 21.85
+   }
+  },
+  "tasks": [
+   {
+    "type": "locate",
+    "target": "load_dotenv",
+    "baseline": 13324,
+    "lean": 1234,
+    "ctxgraph": 888,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "FlaskCliRunner",
+    "baseline": 3546,
+    "lean": 722,
+    "ctxgraph": 516,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Blueprint",
+    "baseline": 8800,
+    "lean": 9345,
+    "ctxgraph": 2209,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Scaffold",
+    "baseline": 10042,
+    "lean": 8561,
+    "ctxgraph": 708,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "from_prefixed_env",
+    "baseline": 4410,
+    "lean": 881,
+    "ctxgraph": 762,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "before_app_request",
+    "baseline": 8692,
+    "lean": 321,
+    "ctxgraph": 177,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "logger",
+    "baseline": 12991,
+    "lean": 1110,
+    "ctxgraph": 398,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "delete",
+    "baseline": 10039,
+    "lean": 505,
+    "ctxgraph": 354,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "abort",
+    "baseline": 8585,
+    "lean": 1139,
+    "ctxgraph": 369,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "loads",
+    "baseline": 2172,
+    "lean": 1097,
+    "ctxgraph": 705,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "add_template_filter",
+    "baseline": 12984,
+    "lean": 460,
+    "ctxgraph": 242,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "push",
+    "baseline": 6392,
+    "lean": 685,
+    "ctxgraph": 416,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "add_url_rule",
+    "baseline": 8753,
+    "lean": 1794,
+    "ctxgraph": 1549,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "teardown_appcontext",
+    "baseline": 13004,
+    "lean": 700,
+    "ctxgraph": 421,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "make_response",
+    "baseline": 8569,
+    "lean": 1136,
+    "ctxgraph": 2579,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "send_file",
+    "baseline": 8558,
+    "lean": 2164,
+    "ctxgraph": 1838,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "teardown_request",
+    "baseline": 10054,
+    "lean": 991,
+    "ctxgraph": 601,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "register",
+    "baseline": 1250,
+    "lean": 2575,
+    "ctxgraph": 2187,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "blueprint",
+    "baseline": 3321,
+    "lean": 2633,
+    "ctxgraph": 240,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "has_request_context",
+    "baseline": 6383,
+    "lean": 512,
+    "ctxgraph": 321,
+    "correct": true
+   },
+   {
+    "type": "understand",
+    "target": "copy_current_request_context",
+    "baseline": 9469,
+    "lean": 1453,
+    "ctxgraph": 780,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "SessionMixin",
+    "baseline": 15725,
+    "lean": 1892,
+    "ctxgraph": 467,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "invoke",
+    "baseline": 36762,
+    "lean": 2206,
+    "ctxgraph": 527,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 4
+   },
+   {
+    "type": "understand",
+    "target": "result",
+    "baseline": 11202,
+    "lean": 2568,
+    "ctxgraph": 201,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 9
+   },
+   {
+    "type": "understand",
+    "target": "render_template",
+    "baseline": 22357,
+    "lean": 1898,
+    "ctxgraph": 534,
+    "usage_recall": 1.0,
+    "precision": 0.9166666666666666,
+    "true_users": 11
+   },
+   {
+    "type": "understand",
+    "target": "dumps",
+    "baseline": 12321,
+    "lean": 1828,
+    "ctxgraph": 315,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 8
+   },
+   {
+    "type": "understand",
+    "target": "handle_url_build_error",
+    "baseline": 65242,
+    "lean": 1847,
+    "ctxgraph": 503,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "stream_with_context",
+    "baseline": 17390,
+    "lean": 1496,
+    "ctxgraph": 207,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 4
+   },
+   {
+    "type": "understand",
+    "target": "post",
+    "baseline": 34954,
+    "lean": 2458,
+    "ctxgraph": 585,
+    "usage_recall": 0.9285714285714286,
+    "precision": 1.0,
+    "true_users": 14
+   },
+   {
+    "type": "understand",
+    "target": "after_request",
+    "baseline": 34290,
+    "lean": 1848,
+    "ctxgraph": 363,
+    "usage_recall": 0.8,
+    "precision": 1.0,
+    "true_users": 5
+   },
+   {
+    "type": "understand",
+    "target": "get_version",
+    "baseline": 22481,
+    "lean": 985,
+    "ctxgraph": 247,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "update",
+    "baseline": 46117,
+    "lean": 2068,
+    "ctxgraph": 673,
+    "usage_recall": 1.0,
+    "precision": 0.9230769230769231,
+    "true_users": 12
+   },
+   {
+    "type": "understand",
+    "target": "static_folder",
+    "baseline": 66759,
+    "lean": 2512,
+    "ctxgraph": 231,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 8
+   },
+   {
+    "type": "understand",
+    "target": "render_template_string",
+    "baseline": 21555,
+    "lean": 1515,
+    "ctxgraph": 362,
+    "usage_recall": 1.0,
+    "precision": 0.8333333333333334,
+    "true_users": 5
+   },
+   {
+    "type": "understand",
+    "target": "before_request",
+    "baseline": 45362,
+    "lean": 1926,
+    "ctxgraph": 409,
+    "usage_recall": 0.8,
+    "precision": 1.0,
+    "true_users": 5
+   },
+   {
+    "type": "impact",
+    "target": "examples/tutorial/flaskr/db.py",
+    "baseline": 4391,
+    "lean": 2138,
+    "ctxgraph": 656,
+    "dependent_recall": 1.0,
+    "true_dependents": 7
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/ctx.py",
+    "baseline": 27748,
+    "lean": 2962,
+    "ctxgraph": 1301,
+    "dependent_recall": 1.0,
+    "true_dependents": 7
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/testing.py",
+    "baseline": 63715,
+    "lean": 3152,
+    "ctxgraph": 929,
+    "dependent_recall": 1.0,
+    "true_dependents": 8
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/views.py",
+    "baseline": 8303,
+    "lean": 1737,
+    "ctxgraph": 448,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/helpers.py",
+    "baseline": 61000,
+    "lean": 2983,
+    "ctxgraph": 1123,
+    "dependent_recall": 1.0,
+    "true_dependents": 19
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/sansio/scaffold.py",
+    "baseline": 34839,
+    "lean": 2932,
+    "ctxgraph": 1397,
+    "dependent_recall": 1.0,
+    "true_dependents": 4
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/json/tag.py",
+    "baseline": 5810,
+    "lean": 2084,
+    "ctxgraph": 780,
+    "dependent_recall": 1.0,
+    "true_dependents": 2
+   },
+   {
+    "type": "impact",
+    "target": "examples/tutorial/flaskr/blog.py",
+    "baseline": 60562,
+    "lean": 3121,
+    "ctxgraph": 882,
+    "dependent_recall": 1.0,
+    "true_dependents": 12
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/sessions.py",
+    "baseline": 34516,
+    "lean": 2616,
+    "ctxgraph": 800,
+    "dependent_recall": 1.0,
+    "true_dependents": 6
+   },
+   {
+    "type": "impact",
+    "target": "src/flask/debughelpers.py",
+    "baseline": 49503,
+    "lean": 2139,
+    "ctxgraph": 765,
+    "dependent_recall": 1.0,
+    "true_dependents": 4
+   },
+   {
+    "type": "orient",
+    "target": "repo",
+    "baseline": 41511,
+    "lean": 1044,
+    "ctxgraph": 1900
+   }
+  ]
+ },
+ {
+  "repo": "express",
+  "index": {
+   "files": 142,
+   "symbols": 298,
+   "source_tokens": 141790,
+   "cold_seconds": 1.16,
+   "warm_refresh_seconds": 0.097,
+   "db_mb": 0.91
+  },
+  "tool_schema_tokens": 507,
+  "summary": {
+   "locate": {
+    "n": 20,
+    "baseline_median": 6217.5,
+    "lean_median": 940.0,
+    "ctxgraph_median": 180.0,
+    "baseline_total": 109361,
+    "lean_total": 23193,
+    "ctxgraph_total": 4473,
+    "reduction_pct": 95.9,
+    "reduction_vs_lean_pct": 80.7,
+    "worst_case_ratio": 1.24,
+    "correct": 1.0
+   },
+   "understand": {
+    "n": 15,
+    "baseline_median": 21200,
+    "lean_median": 2619,
+    "ctxgraph_median": 246,
+    "baseline_total": 320815,
+    "lean_total": 35655,
+    "ctxgraph_total": 6666,
+    "reduction_pct": 97.9,
+    "reduction_vs_lean_pct": 81.3,
+    "worst_case_ratio": 5.43,
+    "usage_recall": 0.695,
+    "precision": 0.919
+   },
+   "impact": {
+    "n": 10,
+    "baseline_median": 18457.5,
+    "lean_median": 2594.0,
+    "ctxgraph_median": 750.0,
+    "baseline_total": 191325,
+    "lean_total": 26424,
+    "ctxgraph_total": 9246,
+    "reduction_pct": 95.2,
+    "reduction_vs_lean_pct": 65.0,
+    "worst_case_ratio": 4.18,
+    "dependent_recall": 0.915
+   },
+   "orient": {
+    "n": 1,
+    "baseline_median": 21701,
+    "lean_median": 3958,
+    "ctxgraph_median": 1824,
+    "baseline_total": 21701,
+    "lean_total": 3958,
+    "ctxgraph_total": 1824,
+    "reduction_pct": 91.6,
+    "reduction_vs_lean_pct": 53.9,
+    "worst_case_ratio": 11.9
+   }
+  },
+  "tasks": [
+   {
+    "type": "locate",
+    "target": "clearCookie",
+    "baseline": 10900,
+    "lean": 349,
+    "ctxgraph": 151,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "sendStatus",
+    "baseline": 10910,
+    "lean": 322,
+    "ctxgraph": 126,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "count",
+    "baseline": 1528,
+    "lean": 1470,
+    "ctxgraph": 186,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "users",
+    "baseline": 1704,
+    "lean": 1942,
+    "ctxgraph": 116,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "delete",
+    "baseline": 759,
+    "lean": 503,
+    "ctxgraph": 154,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "View",
+    "baseline": 1889,
+    "lean": 993,
+    "ctxgraph": 635,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "User",
+    "baseline": 382,
+    "lean": 469,
+    "ctxgraph": 98,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "status",
+    "baseline": 11019,
+    "lean": 2050,
+    "ctxgraph": 223,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "type",
+    "baseline": 11025,
+    "lean": 1851,
+    "ctxgraph": 118,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "cookie",
+    "baseline": 10959,
+    "lean": 1767,
+    "ctxgraph": 400,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "stringify",
+    "baseline": 10910,
+    "lean": 684,
+    "ctxgraph": 360,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "listen",
+    "baseline": 6326,
+    "lean": 877,
+    "ctxgraph": 160,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "index",
+    "baseline": 1209,
+    "lean": 887,
+    "ctxgraph": 200,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "format",
+    "baseline": 481,
+    "lean": 600,
+    "ctxgraph": 388,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "param",
+    "baseline": 6206,
+    "lean": 1809,
+    "ctxgraph": 167,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "handle",
+    "baseline": 6241,
+    "lean": 2047,
+    "ctxgraph": 318,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "setCharset",
+    "baseline": 2516,
+    "lean": 407,
+    "ctxgraph": 174,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "enabled",
+    "baseline": 6229,
+    "lean": 567,
+    "ctxgraph": 74,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "engine",
+    "baseline": 6263,
+    "lean": 2014,
+    "ctxgraph": 189,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "resolve",
+    "baseline": 1905,
+    "lean": 1585,
+    "ctxgraph": 236,
+    "correct": true
+   },
+   {
+    "type": "understand",
+    "target": "header",
+    "baseline": 27789,
+    "lean": 2725,
+    "ctxgraph": 290,
+    "usage_recall": 0.5714285714285714,
+    "precision": 1.0,
+    "true_users": 7
+   },
+   {
+    "type": "understand",
+    "target": "error",
+    "baseline": 19364,
+    "lean": 2930,
+    "ctxgraph": 212,
+    "usage_recall": 0.6153846153846154,
+    "precision": 1.0,
+    "true_users": 13
+   },
+   {
+    "type": "understand",
+    "target": "download",
+    "baseline": 16901,
+    "lean": 2316,
+    "ctxgraph": 633,
+    "usage_recall": 1.0,
+    "precision": 0.5,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "accepts",
+    "baseline": 18438,
+    "lean": 1609,
+    "ctxgraph": 147,
+    "usage_recall": 0.6666666666666666,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "exports",
+    "baseline": 5249,
+    "lean": 2829,
+    "ctxgraph": 967,
+    "usage_recall": 0.30952380952380953,
+    "precision": 1.0,
+    "true_users": 42
+   },
+   {
+    "type": "understand",
+    "target": "compileETag",
+    "baseline": 10134,
+    "lean": 1408,
+    "ctxgraph": 273,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "disable",
+    "baseline": 21200,
+    "lean": 1232,
+    "ctxgraph": 168,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 7
+   },
+   {
+    "type": "understand",
+    "target": "method",
+    "baseline": 28809,
+    "lean": 3222,
+    "ctxgraph": 234,
+    "usage_recall": 0.5384615384615384,
+    "precision": 1.0,
+    "true_users": 13
+   },
+   {
+    "type": "understand",
+    "target": "before",
+    "baseline": 29019,
+    "lean": 1960,
+    "ctxgraph": 398,
+    "usage_recall": 0.7777777777777778,
+    "precision": 1.0,
+    "true_users": 9
+   },
+   {
+    "type": "understand",
+    "target": "view",
+    "baseline": 17039,
+    "lean": 2794,
+    "ctxgraph": 117,
+    "usage_recall": 0.3333333333333333,
+    "precision": 1.0,
+    "true_users": 6
+   },
+   {
+    "type": "understand",
+    "target": "send",
+    "baseline": 37188,
+    "lean": 3652,
+    "ctxgraph": 2091,
+    "usage_recall": 0.5909090909090909,
+    "precision": 0.9512195121951219,
+    "true_users": 66
+   },
+   {
+    "type": "understand",
+    "target": "normalizeType",
+    "baseline": 14869,
+    "lean": 1221,
+    "ctxgraph": 135,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "path",
+    "baseline": 24952,
+    "lean": 2471,
+    "ctxgraph": 246,
+    "usage_recall": 0.8666666666666667,
+    "precision": 1.0,
+    "true_users": 30
+   },
+   {
+    "type": "understand",
+    "target": "message",
+    "baseline": 22749,
+    "lean": 2619,
+    "ctxgraph": 176,
+    "usage_recall": 0.15789473684210525,
+    "precision": 1.0,
+    "true_users": 19
+   },
+   {
+    "type": "understand",
+    "target": "sendFile",
+    "baseline": 27115,
+    "lean": 2667,
+    "ctxgraph": 579,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "impact",
+    "target": "examples/mvc/controllers/user-pet/index.js",
+    "baseline": 29524,
+    "lean": 2072,
+    "ctxgraph": 675,
+    "dependent_recall": 1.0,
+    "true_dependents": 5
+   },
+   {
+    "type": "impact",
+    "target": "examples/route-separation/user.js",
+    "baseline": 17577,
+    "lean": 3339,
+    "ctxgraph": 652,
+    "dependent_recall": 0.5,
+    "true_dependents": 6
+   },
+   {
+    "type": "impact",
+    "target": "examples/view-locals/index.js",
+    "baseline": 13340,
+    "lean": 3312,
+    "ctxgraph": 822,
+    "dependent_recall": 0.9444444444444444,
+    "true_dependents": 18
+   },
+   {
+    "type": "impact",
+    "target": "lib/request.js",
+    "baseline": 3771,
+    "lean": 2958,
+    "ctxgraph": 770,
+    "dependent_recall": 0.8333333333333334,
+    "true_dependents": 6
+   },
+   {
+    "type": "impact",
+    "target": "lib/utils.js",
+    "baseline": 18518,
+    "lean": 2230,
+    "ctxgraph": 729,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "examples/view-locals/user.js",
+    "baseline": 3055,
+    "lean": 1843,
+    "ctxgraph": 730,
+    "dependent_recall": 1.0,
+    "true_dependents": 2
+   },
+   {
+    "type": "impact",
+    "target": "lib/response.js",
+    "baseline": 25248,
+    "lean": 3413,
+    "ctxgraph": 1961,
+    "dependent_recall": 1.0,
+    "true_dependents": 49
+   },
+   {
+    "type": "impact",
+    "target": "examples/route-map/index.js",
+    "baseline": 22082,
+    "lean": 1977,
+    "ctxgraph": 1766,
+    "dependent_recall": 1.0,
+    "true_dependents": 8
+   },
+   {
+    "type": "impact",
+    "target": "examples/resource/index.js",
+    "baseline": 18397,
+    "lean": 1857,
+    "ctxgraph": 308,
+    "dependent_recall": 1.0,
+    "true_dependents": 2
+   },
+   {
+    "type": "impact",
+    "target": "lib/view.js",
+    "baseline": 39813,
+    "lean": 3423,
+    "ctxgraph": 833,
+    "dependent_recall": 0.875,
+    "true_dependents": 8
+   },
+   {
+    "type": "orient",
+    "target": "repo",
+    "baseline": 21701,
+    "lean": 3958,
+    "ctxgraph": 1824
+   }
+  ]
+ },
+ {
+  "repo": "gin",
+  "index": {
+   "files": 98,
+   "symbols": 1525,
+   "source_tokens": 194569,
+   "cold_seconds": 1.43,
+   "warm_refresh_seconds": 0.087,
+   "db_mb": 1.13
+  },
+  "tool_schema_tokens": 507,
+  "summary": {
+   "locate": {
+    "n": 20,
+    "baseline_median": 1509.0,
+    "lean_median": 629.0,
+    "ctxgraph_median": 158.5,
+    "baseline_total": 99134,
+    "lean_total": 13532,
+    "ctxgraph_total": 3703,
+    "reduction_pct": 96.3,
+    "reduction_vs_lean_pct": 72.6,
+    "worst_case_ratio": 2.21,
+    "correct": 1.0
+   },
+   "understand": {
+    "n": 15,
+    "baseline_median": 20844,
+    "lean_median": 1422,
+    "ctxgraph_median": 220,
+    "baseline_total": 387118,
+    "lean_total": 23994,
+    "ctxgraph_total": 5081,
+    "reduction_pct": 98.7,
+    "reduction_vs_lean_pct": 78.8,
+    "worst_case_ratio": 11.05,
+    "usage_recall": 0.946,
+    "precision": 0.968
+   },
+   "impact": {
+    "n": 10,
+    "baseline_median": 18821.5,
+    "lean_median": 2174.0,
+    "ctxgraph_median": 599.0,
+    "baseline_total": 175280,
+    "lean_total": 20994,
+    "ctxgraph_total": 5835,
+    "reduction_pct": 96.7,
+    "reduction_vs_lean_pct": 72.2,
+    "worst_case_ratio": 4.64,
+    "dependent_recall": 1.0
+   },
+   "orient": {
+    "n": 1,
+    "baseline_median": 34459,
+    "lean_median": 3730,
+    "ctxgraph_median": 1973,
+    "baseline_total": 34459,
+    "lean_total": 3730,
+    "ctxgraph_total": 1973,
+    "reduction_pct": 94.3,
+    "reduction_vs_lean_pct": 47.1,
+    "worst_case_ratio": 17.47
+   }
+  },
+  "tasks": [
+   {
+    "type": "locate",
+    "target": "tomlBinding",
+    "baseline": 366,
+    "lean": 231,
+    "ctxgraph": 58,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Binding",
+    "baseline": 1421,
+    "lean": 989,
+    "ctxgraph": 141,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "AbortWithStatus",
+    "baseline": 19297,
+    "lean": 481,
+    "ctxgraph": 102,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Reader",
+    "baseline": 572,
+    "lean": 696,
+    "ctxgraph": 99,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "PATCH",
+    "baseline": 3743,
+    "lean": 733,
+    "ctxgraph": 179,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Last",
+    "baseline": 11004,
+    "lean": 506,
+    "ctxgraph": 200,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Routes",
+    "baseline": 1988,
+    "lean": 289,
+    "ctxgraph": 176,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "responseWriter",
+    "baseline": 1510,
+    "lean": 802,
+    "ctxgraph": 82,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "formBinding",
+    "baseline": 641,
+    "lean": 166,
+    "ctxgraph": 55,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Data",
+    "baseline": 19350,
+    "lean": 1658,
+    "ctxgraph": 182,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "StringToBytes",
+    "baseline": 299,
+    "lean": 599,
+    "ctxgraph": 91,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "SetMode",
+    "baseline": 1063,
+    "lean": 1014,
+    "ctxgraph": 265,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Default",
+    "baseline": 1453,
+    "lean": 1269,
+    "ctxgraph": 657,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Stream",
+    "baseline": 19282,
+    "lean": 370,
+    "ctxgraph": 220,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "debugPrintWARNINGNew",
+    "baseline": 1261,
+    "lean": 231,
+    "ctxgraph": 135,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "validate",
+    "baseline": 1600,
+    "lean": 1343,
+    "ctxgraph": 179,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "reset",
+    "baseline": 1540,
+    "lean": 659,
+    "ctxgraph": 387,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "ServeHTTP",
+    "baseline": 11037,
+    "lean": 1039,
+    "ctxgraph": 313,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "uriBinding",
+    "baseline": 199,
+    "lean": 177,
+    "ctxgraph": 54,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "Pusher",
+    "baseline": 1508,
+    "lean": 280,
+    "ctxgraph": 128,
+    "correct": true
+   },
+   {
+    "type": "understand",
+    "target": "chooseData",
+    "baseline": 23248,
+    "lean": 1422,
+    "ctxgraph": 195,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "plainBinding",
+    "baseline": 3400,
+    "lean": 784,
+    "ctxgraph": 56,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "RouterGroup",
+    "baseline": 19476,
+    "lean": 2158,
+    "ctxgraph": 124,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "BindingBody",
+    "baseline": 47191,
+    "lean": 1432,
+    "ctxgraph": 79,
+    "usage_recall": 0.6666666666666666,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "Encoder",
+    "baseline": 3491,
+    "lean": 1203,
+    "ctxgraph": 316,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 7
+   },
+   {
+    "type": "understand",
+    "target": "FileFromFS",
+    "baseline": 47985,
+    "lean": 1066,
+    "ctxgraph": 179,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "yamlBinding",
+    "baseline": 3469,
+    "lean": 1037,
+    "ctxgraph": 63,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "OPTIONS",
+    "baseline": 24161,
+    "lean": 1648,
+    "ctxgraph": 234,
+    "usage_recall": 0.8,
+    "precision": 1.0,
+    "true_users": 5
+   },
+   {
+    "type": "understand",
+    "target": "safeInt8",
+    "baseline": 23248,
+    "lean": 1095,
+    "ctxgraph": 125,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "JSON",
+    "baseline": 63952,
+    "lean": 3278,
+    "ctxgraph": 631,
+    "usage_recall": 0.9285714285714286,
+    "precision": 1.0,
+    "true_users": 14
+   },
+   {
+    "type": "understand",
+    "target": "DELETE",
+    "baseline": 20844,
+    "lean": 1532,
+    "ctxgraph": 220,
+    "usage_recall": 0.8,
+    "precision": 1.0,
+    "true_users": 5
+   },
+   {
+    "type": "understand",
+    "target": "combineHandlers",
+    "baseline": 17506,
+    "lean": 1302,
+    "ctxgraph": 233,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "removeRepeatedChar",
+    "baseline": 15329,
+    "lean": 1200,
+    "ctxgraph": 625,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "StaticFS",
+    "baseline": 20840,
+    "lean": 1539,
+    "ctxgraph": 360,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 4
+   },
+   {
+    "type": "understand",
+    "target": "addRoute",
+    "baseline": 52978,
+    "lean": 3298,
+    "ctxgraph": 1641,
+    "usage_recall": 1.0,
+    "precision": 0.8571428571428571,
+    "true_users": 6
+   },
+   {
+    "type": "impact",
+    "target": "render/reader.go",
+    "baseline": 29643,
+    "lean": 1780,
+    "ctxgraph": 650,
+    "dependent_recall": 1.0,
+    "true_dependents": 15
+   },
+   {
+    "type": "impact",
+    "target": "mode.go",
+    "baseline": 46562,
+    "lean": 3061,
+    "ctxgraph": 441,
+    "dependent_recall": 1.0,
+    "true_dependents": 10
+   },
+   {
+    "type": "impact",
+    "target": "recovery.go",
+    "baseline": 18586,
+    "lean": 3345,
+    "ctxgraph": 514,
+    "dependent_recall": 1.0,
+    "true_dependents": 4
+   },
+   {
+    "type": "impact",
+    "target": "internal/bytesconv/bytesconv.go",
+    "baseline": 21864,
+    "lean": 2382,
+    "ctxgraph": 559,
+    "dependent_recall": 1.0,
+    "true_dependents": 9
+   },
+   {
+    "type": "impact",
+    "target": "binding/yaml.go",
+    "baseline": 3143,
+    "lean": 1079,
+    "ctxgraph": 633,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "binding/toml.go",
+    "baseline": 3162,
+    "lean": 1062,
+    "ctxgraph": 636,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "codec/json/api.go",
+    "baseline": 4546,
+    "lean": 1966,
+    "ctxgraph": 618,
+    "dependent_recall": 1.0,
+    "true_dependents": 7
+   },
+   {
+    "type": "impact",
+    "target": "debug.go",
+    "baseline": 19057,
+    "lean": 3007,
+    "ctxgraph": 574,
+    "dependent_recall": 1.0,
+    "true_dependents": 6
+   },
+   {
+    "type": "impact",
+    "target": "binding/protobuf.go",
+    "baseline": 2923,
+    "lean": 829,
+    "ctxgraph": 630,
+    "dependent_recall": 1.0,
+    "true_dependents": 2
+   },
+   {
+    "type": "impact",
+    "target": "internal/fs/fs.go",
+    "baseline": 25794,
+    "lean": 2483,
+    "ctxgraph": 580,
+    "dependent_recall": 1.0,
+    "true_dependents": 10
+   },
+   {
+    "type": "orient",
+    "target": "repo",
+    "baseline": 34459,
+    "lean": 3730,
+    "ctxgraph": 1973
+   }
+  ]
+ },
+ {
+  "repo": "zod",
+  "index": {
+   "files": 522,
+   "symbols": 3882,
+   "source_tokens": 1004583,
+   "cold_seconds": 6.61,
+   "warm_refresh_seconds": 0.155,
+   "db_mb": 5.09
+  },
+  "tool_schema_tokens": 507,
+  "summary": {
+   "locate": {
+    "n": 20,
+    "baseline_median": 25098.5,
+    "lean_median": 1764.5,
+    "ctxgraph_median": 215.5,
+    "baseline_total": 392422,
+    "lean_total": 36699,
+    "ctxgraph_total": 8535,
+    "reduction_pct": 97.8,
+    "reduction_vs_lean_pct": 76.7,
+    "worst_case_ratio": 0.68,
+    "correct": 0.95
+   },
+   "understand": {
+    "n": 15,
+    "baseline_median": 52452,
+    "lean_median": 2759,
+    "ctxgraph_median": 296,
+    "baseline_total": 796625,
+    "lean_total": 41426,
+    "ctxgraph_total": 9819,
+    "reduction_pct": 98.8,
+    "reduction_vs_lean_pct": 76.3,
+    "worst_case_ratio": 22.88,
+    "usage_recall": 0.867,
+    "precision": 0.883
+   },
+   "impact": {
+    "n": 10,
+    "baseline_median": 61440.5,
+    "lean_median": 4331.0,
+    "ctxgraph_median": 1785.0,
+    "baseline_total": 576094,
+    "lean_total": 44162,
+    "ctxgraph_total": 15647,
+    "reduction_pct": 97.3,
+    "reduction_vs_lean_pct": 64.6,
+    "worst_case_ratio": 2.02,
+    "dependent_recall": 0.815
+   },
+   "orient": {
+    "n": 1,
+    "baseline_median": 73976,
+    "lean_median": 5988,
+    "ctxgraph_median": 1903,
+    "baseline_total": 73976,
+    "lean_total": 5988,
+    "ctxgraph_total": 1903,
+    "reduction_pct": 97.4,
+    "reduction_vs_lean_pct": 68.2,
+    "worst_case_ratio": 38.87
+   }
+  },
+  "tasks": [
+   {
+    "type": "locate",
+    "target": "lowercase",
+    "baseline": 25164,
+    "lean": 700,
+    "ctxgraph": 80,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "e164",
+    "baseline": 25839,
+    "lean": 2241,
+    "ctxgraph": 281,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "$ZodPromise",
+    "baseline": 25092,
+    "lean": 631,
+    "ctxgraph": 121,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "postProcessor",
+    "baseline": 776,
+    "lean": 1137,
+    "ctxgraph": 1140,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "nonpositive",
+    "baseline": 25169,
+    "lean": 1072,
+    "ctxgraph": 289,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "_int",
+    "baseline": 24756,
+    "lean": 335,
+    "ctxgraph": 202,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "isInt",
+    "baseline": 25086,
+    "lean": 1069,
+    "ctxgraph": 207,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "hostname",
+    "baseline": 25225,
+    "lean": 2927,
+    "ctxgraph": 254,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "maxLength",
+    "baseline": 25198,
+    "lean": 1288,
+    "ctxgraph": 224,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "ZodError",
+    "baseline": 4802,
+    "lean": 4974,
+    "ctxgraph": 483,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "ZodCompileUnsupportedError",
+    "baseline": 25105,
+    "lean": 2391,
+    "ctxgraph": 246,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "_coercedDate",
+    "baseline": 24756,
+    "lean": 328,
+    "ctxgraph": 183,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "length",
+    "baseline": 26064,
+    "lean": 3262,
+    "ctxgraph": 276,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "unwrap",
+    "baseline": 25208,
+    "lean": 2329,
+    "ctxgraph": 204,
+    "correct": false
+   },
+   {
+    "type": "locate",
+    "target": "formatDate",
+    "baseline": 650,
+    "lean": 309,
+    "ctxgraph": 171,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "_positive",
+    "baseline": 24756,
+    "lean": 229,
+    "ctxgraph": 109,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "nanoid",
+    "baseline": 25927,
+    "lean": 2844,
+    "ctxgraph": 281,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "process",
+    "baseline": 2092,
+    "lean": 2802,
+    "ctxgraph": 131,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "regex",
+    "baseline": 26223,
+    "lean": 3055,
+    "ctxgraph": 202,
+    "correct": true
+   },
+   {
+    "type": "locate",
+    "target": "generate",
+    "baseline": 4534,
+    "lean": 2776,
+    "ctxgraph": 3451,
+    "correct": true
+   },
+   {
+    "type": "understand",
+    "target": "parseAsync",
+    "baseline": 30868,
+    "lean": 3524,
+    "ctxgraph": 1349,
+    "usage_recall": 0.8367346938775511,
+    "precision": 1.0,
+    "true_users": 49
+   },
+   {
+    "type": "understand",
+    "target": "_parse",
+    "baseline": 67762,
+    "lean": 3212,
+    "ctxgraph": 2354,
+    "usage_recall": 1.0,
+    "precision": 0.6,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "discriminatedUnion",
+    "baseline": 57215,
+    "lean": 4696,
+    "ctxgraph": 994,
+    "usage_recall": 0.9629629629629629,
+    "precision": 0.9629629629629629,
+    "true_users": 27
+   },
+   {
+    "type": "understand",
+    "target": "ToJSONSchemaContext",
+    "baseline": 52452,
+    "lean": 2426,
+    "ctxgraph": 879,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "custom",
+    "baseline": 51555,
+    "lean": 3842,
+    "ctxgraph": 598,
+    "usage_recall": 0.5517241379310345,
+    "precision": 0.9411764705882353,
+    "true_users": 29
+   },
+   {
+    "type": "understand",
+    "target": "stringFormat",
+    "baseline": 55516,
+    "lean": 1677,
+    "ctxgraph": 256,
+    "usage_recall": 0.75,
+    "precision": 0.75,
+    "true_users": 4
+   },
+   {
+    "type": "understand",
+    "target": "ZodISOTime",
+    "baseline": 50969,
+    "lean": 1254,
+    "ctxgraph": 107,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "$ZodNever",
+    "baseline": 68561,
+    "lean": 1838,
+    "ctxgraph": 172,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 7
+   },
+   {
+    "type": "understand",
+    "target": "extract",
+    "baseline": 42209,
+    "lean": 1969,
+    "ctxgraph": 296,
+    "usage_recall": 0.6666666666666666,
+    "precision": 0.6666666666666666,
+    "true_users": 3
+   },
+   {
+    "type": "understand",
+    "target": "_coercedBigint",
+    "baseline": 25726,
+    "lean": 1008,
+    "ctxgraph": 219,
+    "usage_recall": 1.0,
+    "precision": 0.6666666666666666,
+    "true_users": 2
+   },
+   {
+    "type": "understand",
+    "target": "File",
+    "baseline": 43997,
+    "lean": 2277,
+    "ctxgraph": 224,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 7
+   },
+   {
+    "type": "understand",
+    "target": "tuple",
+    "baseline": 72959,
+    "lean": 4323,
+    "ctxgraph": 1446,
+    "usage_recall": 0.7017543859649122,
+    "precision": 0.975609756097561,
+    "true_users": 57
+   },
+   {
+    "type": "understand",
+    "target": "node",
+    "baseline": 31313,
+    "lean": 3859,
+    "ctxgraph": 253,
+    "usage_recall": 0.6666666666666666,
+    "precision": 0.8,
+    "true_users": 6
+   },
+   {
+    "type": "understand",
+    "target": "looseRecord",
+    "baseline": 86481,
+    "lean": 2762,
+    "ctxgraph": 452,
+    "usage_recall": 0.875,
+    "precision": 0.875,
+    "true_users": 8
+   },
+   {
+    "type": "understand",
+    "target": "ParseContextInternal",
+    "baseline": 59042,
+    "lean": 2759,
+    "ctxgraph": 220,
+    "usage_recall": 1.0,
+    "precision": 1.0,
+    "true_users": 5
+   },
+   {
+    "type": "impact",
+    "target": "packages/bench/memory/harness.ts",
+    "baseline": 6531,
+    "lean": 2256,
+    "ctxgraph": 1272,
+    "dependent_recall": 1.0,
+    "true_dependents": 9
+   },
+   {
+    "type": "impact",
+    "target": "packages/bench/property-access.ts",
+    "baseline": 3620,
+    "lean": 3196,
+    "ctxgraph": 1790,
+    "dependent_recall": 1.0,
+    "true_dependents": 4
+   },
+   {
+    "type": "impact",
+    "target": "packages/bench/memory/indent-leak.ts",
+    "baseline": 91275,
+    "lean": 5348,
+    "ctxgraph": 1623,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/classic/schemas.ts",
+    "baseline": 68054,
+    "lean": 4311,
+    "ctxgraph": 1996,
+    "dependent_recall": 0.046511627906976744,
+    "true_dependents": 43
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/core/core.ts",
+    "baseline": 92117,
+    "lean": 6222,
+    "ctxgraph": 1780,
+    "dependent_recall": 0.9795918367346939,
+    "true_dependents": 49
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/core/registries.ts",
+    "baseline": 72637,
+    "lean": 5193,
+    "ctxgraph": 1956,
+    "dependent_recall": 1.0,
+    "true_dependents": 14
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/core/memoizer.ts",
+    "baseline": 53157,
+    "lean": 5571,
+    "ctxgraph": 1903,
+    "dependent_recall": 0.8888888888888888,
+    "true_dependents": 9
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/core/util.ts",
+    "baseline": 106363,
+    "lean": 4042,
+    "ctxgraph": 1994,
+    "dependent_recall": 0.23333333333333334,
+    "true_dependents": 30
+   },
+   {
+    "type": "impact",
+    "target": "packages/docs/loaders/stars.ts",
+    "baseline": 54827,
+    "lean": 3672,
+    "ctxgraph": 716,
+    "dependent_recall": 1.0,
+    "true_dependents": 3
+   },
+   {
+    "type": "impact",
+    "target": "packages/zod/src/v4/classic/from-json-schema.ts",
+    "baseline": 27513,
+    "lean": 4351,
+    "ctxgraph": 617,
+    "dependent_recall": 1.0,
+    "true_dependents": 6
+   },
+   {
+    "type": "orient",
+    "target": "repo",
+    "baseline": 73976,
+    "lean": 5988,
+    "ctxgraph": 1903
+   }
+  ]
+ }
+]

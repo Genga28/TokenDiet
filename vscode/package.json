@@ -1,0 +1,29 @@
+{
+  "name": "tokendiet",
+  "displayName": "TokenDiet: code graph for AI coding agents",
+  "description": "Cut the tokens Claude Code, Codex, Cursor and Copilot spend exploring your repo. One click builds a local code graph, wires up the agents, and carries a repo map + notes into every new session. Shows how much it saved.",
+  "version": "0.1.0",
+  "publisher": "tokendiet",
+  "license": "SEE LICENSE IN README.md",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["AI", "Other"],
+  "keywords": ["claude", "codex", "copilot", "cursor", "mcp", "tokens", "context", "code graph"],
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      { "command": "tokendiet.enable", "title": "TokenDiet: Enable for this workspace" },
+      { "command": "tokendiet.disable", "title": "TokenDiet: Disable for this workspace" },
+      { "command": "tokendiet.report", "title": "TokenDiet: Show savings report" },
+      { "command": "tokendiet.reindex", "title": "TokenDiet: Rebuild index" }
+    ],
+    "configuration": {
+      "title": "TokenDiet",
+      "properties": {
+        "tokendiet.pythonPath": { "type": "string", "default": "", "description": "Python 3.10+ used to create TokenDiet's private environment. Empty: auto-detect." },
+        "tokendiet.mapBudget": { "type": "number", "default": 1500, "description": "Token budget of the repo map injected at the start of each Claude Code session." },
+        "tokendiet.agents": { "type": "string", "default": "", "description": "Comma list of agents to configure (claude,codex,cursor,copilot). Empty: auto-detect." }
+      }
+    }
+  }
+}
