@@ -2,7 +2,7 @@
   "name": "tokendiet",
   "displayName": "TokenDiet: code graph for AI coding agents",
   "description": "Cut the tokens Claude Code, Codex, Cursor and Copilot spend exploring your repo. One click builds a local code graph, wires up the agents, and carries a repo map + notes into every new session. Shows how much it saved.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "tokendiet",
   "license": "MIT",
   "author": { "name": "Genga28", "url": "https://github.com/Genga28" },

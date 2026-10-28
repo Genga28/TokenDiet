@@ -44,10 +44,30 @@ def main(argv=None):
     p.add_argument("--quick", action="store_true", help="skip the Claude Code session comparison")
     p = sub.add_parser("session-start", help="SessionStart hook entry point"); p.add_argument("--budget", type=int, default=1500)
     p = sub.add_parser("mcp-config"); p.add_argument("repo")
+    p = sub.add_parser("update", help="upgrade tokendiet from PyPI and refresh this repo's setup")
+    p.add_argument("repo", nargs="?", default="."); p.add_argument("--auto", action="store_true", help=argparse.SUPPRESS)
+    p = sub.add_parser("sync", help="rewrite the files init added if they came from another version")
+    p.add_argument("repo", nargs="?", default=".")
     a = ap.parse_args(argv)
     if a.cmd != "serve":
         sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252
 
+    if a.cmd == "update":
+        from . import update
+        if a.auto:
+            update.auto()
+            return
+        from . import __version__
+        if update.update() != __version__:
+            # the new code is on disk but not loaded here; let it rewrite the repo files
+            import subprocess
+            subprocess.run([sys.executable, "-m", "tokendiet", "sync", a.repo])
+            print("updated. Restart the agent session to load the new version.")
+        return
+    if a.cmd == "sync":
+        from . import setup_agents
+        print("setup refreshed" if setup_agents.sync(a.repo) else "setup already current")
+        return
     if a.cmd == "claude-md":
         print(CLAUDE_MD)
         return

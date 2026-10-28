@@ -185,7 +185,11 @@ function activate(context) {
       catch (e) { vscode.window.showErrorMessage("TokenDiet: " + e.message); }
     }),
     vscode.workspace.onDidChangeWorkspaceFolders(refreshStatus));
-  refreshStatus();
+  // after an extension update, rewrite this workspace's agent files with the new version's templates
+  const f = folder();
+  const synced = f && fs.existsSync(path.join(f, ".tokendiet", "enabled"))
+    ? td(["sync", f], true).catch((e) => output.appendLine("sync failed: " + e.message)) : Promise.resolve();
+  synced.then(refreshStatus);
   const timer = setInterval(refreshStatus, 5 * 60 * 1000);
   context.subscriptions.push({ dispose: () => clearInterval(timer) });
 }

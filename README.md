@@ -53,6 +53,11 @@ config). Options: `--agents claude,codex,cursor,copilot`, `--vscode`, `--no-hook
 
 The index and notes live in `<repo>/.tokendiet/` (self-gitignored). Notes survive re-indexing and upgrades.
 
+**Updates.** pip/pipx installs check PyPI at most once a day, in a background process started by the session hook,
+and upgrade themselves; `tokendiet update` does it now. After an upgrade the files `init` wrote are refreshed on the
+next session (`tokendiet sync` by hand). The VS Code extension updates through the Marketplace and re-syncs the
+workspace when it starts. Local and editable installs are never touched. Opt out: `TOKENDIET_NO_AUTO_UPDATE=1`.
+
 ## Tools
 
 | tool | use it for | typical size |

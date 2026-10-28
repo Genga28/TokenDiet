@@ -12,6 +12,8 @@ import sys
 import time
 from pathlib import Path
 
+from . import __version__
+
 BEGIN, END = "<!-- tokendiet:begin -->", "<!-- tokendiet:end -->"
 HOOK_TAG = "tokendiet session-start"
 AGENTS = ("claude", "codex", "cursor", "copilot")
@@ -197,6 +199,10 @@ def init(repo, agents=None, hook=True, budget=1500, vscode=False):
     r = g.ix.refresh(force=True, verbose=True)
     g.con.execute("INSERT OR IGNORE INTO meta VALUES('enabled_at', ?)", (time.strftime("%Y-%m-%dT%H:%M:%S"),))
     g.con.execute("INSERT OR REPLACE INTO meta VALUES('agents', ?)", (",".join(agents),))
+    # lets sync() rewrite these files with the same choices after an upgrade
+    g.con.execute("INSERT OR REPLACE INTO meta VALUES('init_version', ?)", (__version__,))
+    g.con.execute("INSERT OR REPLACE INTO meta VALUES('init_args', ?)",
+                  (json.dumps({"agents": agents, "hook": hook, "budget": budget}),))
     g.con.commit()
     (repo / ".tokendiet" / "enabled").write_text(",".join(agents), encoding="utf-8")
     done.append(f"index: {r.get('files')} files in {r.get('seconds')}s -> .tokendiet/")
@@ -268,6 +274,32 @@ def uninit(repo):
     print("tokendiet disabled. The index, usage log and notes remain in .tokendiet/ (delete it to remove them).")
 
 
+def sync(repo):
+    """Re-run init with the repo's original choices if it was set up by another tokendiet version.
+
+    Returns True if the files were rewritten. Output is swallowed: this runs inside hooks and the extension.
+    """
+    import contextlib
+    import io
+    import sqlite3
+    repo = Path(repo).resolve()
+    db = repo / ".tokendiet" / "graph.db"
+    if not (repo / ".tokendiet" / "enabled").exists() or not db.exists():
+        return False
+    con = sqlite3.connect(db)
+    try:
+        meta = dict(con.execute("SELECT k, v FROM meta WHERE k IN ('init_version','init_args','agents')"))
+    finally:
+        con.close()
+    if meta.get("init_version") == __version__:
+        return False
+    args = json.loads(meta["init_args"]) if "init_args" in meta else {
+        "agents": [a for a in meta.get("agents", "").split(",") if a] or None, "hook": True, "budget": 1500}
+    with contextlib.redirect_stdout(io.StringIO()):
+        init(repo, **args)
+    return True
+
+
 def session_start(budget=1500):
     """SessionStart hook: print the repo map + notes as additional context. Never blocks the session."""
     try:
@@ -275,6 +307,12 @@ def session_start(budget=1500):
     except json.JSONDecodeError:
         payload = {}
     repo = payload.get("cwd") or os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
+    try:
+        from . import update
+        update.spawn_auto()
+        sync(repo)
+    except Exception:
+        pass
     try:
         from . import meter
         from .graph import Graph
